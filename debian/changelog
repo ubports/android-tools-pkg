@@ -1,0 +1,69 @@
+android-tools (4.1.1+git20120801-1) unstable; urgency=low
+
+  * Initial upload to Debian (closes: #685178), based on the work of Marcin
+    Juszkiewicz.
+  * Make the package amd64 and i386 only. ARM needs testing.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Tue, 14 Aug 2012 12:24:28 +0000
+
+android-tools (4.1.1+git20120801-0ubuntu1) quantal; urgency=low
+
+  * Updated upstream code:
+    core:   23ee469c4b790634959e5ccf83134f44e73fb72b
+    extras: 983ce5738cee0bf78b87d6274fe1387129768302
+  * Fixed debian/copyright to be DEP-5 compatible.
+  * Added license information for all files.
+  * Dropped not needed include files.
+  * Dropped core/fastboot/enfineering_key.p12 file.
+
+ -- Marcin Juszkiewicz <marcin.juszkiewicz@linaro.org>  Wed, 01 Aug 2012 11:19:27 +0200
+
+android-tools (4.1.1+git20120713-0ubuntu1) quantal; urgency=low
+
+  * New upstream release.
+    core:   2177c79bddc66e295599d87007d4cbec549e1cac
+    extras: d2b6666effb387c9052cd63378c6d5ddd1c0d1c7
+  * Removed -D_GNU_SOURCE -D_XOPEN_SOURCE from adb's makefile.
+  * Added extras/ext4_utils directory from platform/system/extras git (for
+  	fastboot)
+
+ -- Marcin Juszkiewicz <marcin.juszkiewicz@linaro.org>  Fri, 13 Jul 2012 15:59:49 +0200
+
+android-tools (4.0.4-20120618-1~linaro1) precise; urgency=low
+
+  * New upstream release.
+  * New way of building adb/fastboot: instead of re-using Android build system
+  	I used makefile from
+  	http://blog.alexworld.it/post/9707276488/how-to-build-android-adb-on-arm
+  	and wrote similar version for fastboot. No embedded zlib anymore.
+  * Added README.source with information how to update package.
+  * Added cross compilation support.
+  * Added hardening support.
+  * Added small descriptions to patches.
+
+ -- Marcin Juszkiewicz <marcin.juszkiewicz@linaro.org>  Mon, 18 Jun 2012 09:42:57 +0200
+
+android-tools (2.3.5-11.09.2) precise; urgency=low
+
+  * Added Archos USB Vendor ID to list of supported vendors
+  * Cleaned patches
+
+ -- Marcin Juszkiewicz <marcin.juszkiewicz@linaro.org>  Mon, 06 Feb 2012 18:11:32 -0800
+
+android-tools (2.3.5-11.09.1) oneiric; urgency=low
+
+  * Fixed build dependencies to get it buildable on i386.
+
+ -- Marcin Juszkiewicz <marcin.juszkiewicz@linaro.org>  Mon, 07 Nov 2011 16:26:36 +0100
+
+android-tools (2.3.5-11.09) natty; urgency=low
+
+  * Package and updated for natty.
+
+ -- Tom Gall <tom.gall@linaro.org>  Mon, 26 Sep 2011 16:18:10 -0500
+
+android-tools (1.0.26-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Marcin Juszkiewicz <marcin.juszkiewicz@linaro.org>  Thu, 10 Feb 2011 14:03:37 +0100
