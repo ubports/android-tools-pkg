@@ -1,2 +1,1 @@
-add-makefile-for-fastboot.patch
-add-makefile-for-adb.patch
+remove-selinux-android.patch

@@ -4,25 +4,38 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-# This has to be exported to make some magic below work.
-export DH_OPTIONS
 export DEB_HOST_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 export DEB_BUILD_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
 
 ifneq ($(DEB_BUILD_GNU_TYPE),$(DEB_HOST_GNU_TYPE))
-	CC = $(DEB_HOST_GNU_TYPE)-gcc
+export CC := $(DEB_HOST_GNU_TYPE)-gcc
+else
+export CC := gcc
 endif
 
+M := $(CURDIR)/debian/makefiles
+
+INSTALL := install
+INSTALL_PROGRAM = $(INSTALL)
+
 %:
-	dh $@
+	dh $@ --with python2
 
 override_dh_clean:
 	dh_clean
-	rm -f core/adb/*.o core/adb/adb core/fastboot/*.o core/fastboot/fastboot
+	$(MAKE) -f $(M)/adb.mk -C core/adb clean
+	$(MAKE) -f $(M)/fastboot.mk -C core/fastboot clean
+	$(MAKE) -f $(M)/ext4_utils.mk -C extras/ext4_utils clean
 
 override_dh_auto_build:
-	cd core/adb && make CC=$(CC)
-	cd core/fastboot && make CC=$(CC)
+	$(MAKE) -f $(M)/adb.mk -C core/adb
+	$(MAKE) -f $(M)/fastboot.mk -C core/fastboot
+	$(MAKE) -f $(M)/ext4_utils.mk -C extras/ext4_utils
 
 override_dh_install:
 	dh_install --sourcedir=.
+	$(INSTALL_PROGRAM) core/libsparse/simg_dump.py debian/android-tools-fsutils/usr/bin/simg_dump
+	$(INSTALL_PROGRAM) extras/ext4_utils/mkuserimg.sh debian/android-tools-fsutils/usr/bin/mkuserimg
+
+override_dh_installudev:
+	dh_installudev --priority=70

@@ -1,3 +1,5 @@
+# Makefile for fastboot; from https://heiher.info/2227.html
+
 SRCS+= bootimg.c
 SRCS+= engine.c
 SRCS+= fastboot.c
@@ -19,6 +21,7 @@ SRCS+= output_file.c
 
 VPATH+= ../../extras/ext4_utils/
 SRCS+= make_ext4fs.c
+SRCS+= crc16.c
 SRCS+= ext4_utils.c
 SRCS+= indirect.c
 SRCS+= allocate.c
@@ -34,7 +37,7 @@ CPPFLAGS+= -I../mkbootimg
 CPPFLAGS+= -I../../extras/ext4_utils/
 CPPFLAGS+= -I../libsparse/include/
 
-LIBS+= -lz
+LIBS+= -lz -lselinux
 
 OBJS= $(SRCS:.c=.o)
 
