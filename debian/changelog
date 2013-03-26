@@ -1,3 +1,10 @@
+android-tools (4.2.2+git20130218-3ubuntu1) raring; urgency=low
+
+  * debian/control: Move Architecture field (and associated comments) to the
+    android-tools-adb binary to fix the FTBFS.
+
+ -- Logan Rosen <logan@ubuntu.com>  Tue, 26 Mar 2013 14:27:49 -0400
+
 android-tools (4.2.2+git20130218-3) unstable; urgency=low
 
   * Only build for linux hosts; adb / fastboot also lack an USB host
