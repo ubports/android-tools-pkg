@@ -1,3 +1,10 @@
+android-tools (4.2.2+git20130218-3ubuntu2) saucy; urgency=low
+
+  * debian/android-tools-fastboot.udev: Use uaccess instead of udev-acl (which
+    is gone now).
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Tue, 30 Apr 2013 16:23:18 -0700
+
 android-tools (4.2.2+git20130218-3ubuntu1) raring; urgency=low
 
   * debian/control: Move Architecture field (and associated comments) to the
