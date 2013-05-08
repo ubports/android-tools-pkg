@@ -1,3 +1,11 @@
+android-tools (4.2.2+git20130218-3ubuntu3) saucy; urgency=low
+
+  * Add udev rules to access adb from the user console (LP: #1177850).
+  * Add udev rules to access fastboot from the user console for grouper,
+    manta, mako and maguro (LP: #1177874).
+
+ -- Sergio Schvezov <sergio.schvezov@canonical.com>  Wed, 08 May 2013 13:03:06 -0300
+
 android-tools (4.2.2+git20130218-3ubuntu2) saucy; urgency=low
 
   * debian/android-tools-fastboot.udev: Use uaccess instead of udev-acl (which
