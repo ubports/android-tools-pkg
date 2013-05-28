@@ -1,3 +1,10 @@
+android-tools (4.2.2+git20130218-3ubuntu5) saucy; urgency=low
+
+  * only build android-tools-adbd on armhf, i386 and amd64 until powerpc
+    tablets and phones show up on teh market.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 28 May 2013 18:50:39 +0200
+
 android-tools (4.2.2+git20130218-3ubuntu4) saucy; urgency=low
 
   * debian/patches/add_adbd.patch (could need some cleanup since it is mostly
