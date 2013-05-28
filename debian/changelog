@@ -1,3 +1,14 @@
+android-tools (4.2.2+git20130218-3ubuntu4) saucy; urgency=low
+
+  * debian/patches/add_adbd.patch (could need some cleanup since it is mostly
+    a copy of core/adb)
+  * add adbd.mk to debian/makefiles
+  * add build and clean targets for adbd to debian/rules
+  * add android-tools-adbd binary package (debian/control and .install file)
+  * add upstart job that starts adbd
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 28 May 2013 13:27:09 +0200
+
 android-tools (4.2.2+git20130218-3ubuntu3) saucy; urgency=low
 
   * Add udev rules to access adb from the user console (LP: #1177850).
