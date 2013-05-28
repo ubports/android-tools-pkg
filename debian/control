@@ -52,3 +52,14 @@ Description: Android ext4 utilities with sparse support
  .
  This package provides the utilities to deal with Android sparse ext4
  images.
+
+Package: android-tools-adbd
+Architecture: linux-any
+Depends: ${misc:Depends}, ${python:Depends}, ${shlibs:Depends}
+Description: Android Debug Bridge Phone Daemon
+ Android Debug Bridge (adb) is a versatile tool lets you manage the
+ state of an emulator instance or Android-powered device. It is a
+ client-server program that includes three components.
+ .
+ This package provides the daemon, which runs as a background process
+ on a device you want to connect to from a PC.

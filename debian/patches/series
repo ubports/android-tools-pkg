@@ -1,1 +1,2 @@
 remove-selinux-android.patch
+add_adbd.patch
