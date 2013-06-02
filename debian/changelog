@@ -1,3 +1,9 @@
+android-tools (4.2.2+git20130218-3ubuntu7) saucy; urgency=low
+
+  * fix path in android-tools-adbd upstart job
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Sun, 02 Jun 2013 15:19:30 +0200
+
 android-tools (4.2.2+git20130218-3ubuntu6) saucy; urgency=low
 
   * actually exclude the build of adbd on powerpc as well in debian/rules
