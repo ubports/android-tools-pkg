@@ -1,3 +1,9 @@
+android-tools (4.2.2+git20130218-3ubuntu8) saucy; urgency=low
+
+  * adbd: Use the running user's shell by default.
+
+ -- Stéphane Graber <stgraber@ubuntu.com>  Tue, 04 Jun 2013 18:18:12 -0400
+
 android-tools (4.2.2+git20130218-3ubuntu7) saucy; urgency=low
 
   * fix path in android-tools-adbd upstart job
