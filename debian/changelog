@@ -1,3 +1,10 @@
+android-tools (4.2.2+git20130218-3ubuntu9) saucy; urgency=low
+
+  * adbd.upstart: if /sys/class/android_usb does exist, do not start adbd
+    daemon.
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Fri, 14 Jun 2013 12:00:53 +0100
+
 android-tools (4.2.2+git20130218-3ubuntu8) saucy; urgency=low
 
   * adbd: Use the running user's shell by default.
