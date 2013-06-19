@@ -1,3 +1,11 @@
+android-tools (4.2.2+git20130218-3ubuntu10) saucy; urgency=low
+
+  * debian/patches/adbd.patch: removing commented android_reboot call
+  * debian/patches/reboot-syscall.patch: use glibc syscall() for reboot
+  * debian/makefiles/adbd.mk: adding android_reboot.c to srcs
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Wed, 19 Jun 2013 02:43:35 -0300
+
 android-tools (4.2.2+git20130218-3ubuntu9) saucy; urgency=low
 
   * adbd.upstart: if /sys/class/android_usb does exist, do not start adbd
