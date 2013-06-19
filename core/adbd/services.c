@@ -183,7 +183,7 @@ void reboot_service(int fd, void *arg)
         waitpid(pid, &ret, 0);
     }
 
-    //ret = android_reboot(ANDROID_RB_RESTART2, 0, (char *) arg);
+    ret = android_reboot(ANDROID_RB_RESTART2, 0, (char *) arg);
     if (ret < 0) {
         snprintf(buf, sizeof(buf), "reboot failed: %s\n", strerror(errno));
         writex(fd, buf, strlen(buf));

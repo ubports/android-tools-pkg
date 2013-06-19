@@ -10,6 +10,7 @@ SRCS+= socket_loopback_server.c
 SRCS+= socket_network_client.c
 SRCS+= list.c
 SRCS+= load_file.c
+SRCS+= android_reboot.c
 
 #VPATH+= ../adb
 SRCS+=  adb.c
