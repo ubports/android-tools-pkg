@@ -1,3 +1,9 @@
+android-tools (4.2.2+git20130218-3ubuntu11) saucy; urgency=low
+
+  * add a respawn to the android-tools-adbd upstart job
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 24 Jun 2013 14:58:21 +0200
+
 android-tools (4.2.2+git20130218-3ubuntu10) saucy; urgency=low
 
   * debian/patches/adbd.patch: removing commented android_reboot call
