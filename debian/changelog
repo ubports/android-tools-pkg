@@ -1,3 +1,11 @@
+android-tools (4.2.2+git20130218-3ubuntu12) saucy; urgency=low
+
+  * drop teh "stop on" stanza from adbd upstart job, we want it to run as long
+    as we can to be able to debug shutdown probalms, sendsigs should be enough
+    to kill the adbd process at the end of teh shutdown/reboot
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 28 Jun 2013 20:30:01 +0200
+
 android-tools (4.2.2+git20130218-3ubuntu11) saucy; urgency=low
 
   * add a respawn to the android-tools-adbd upstart job
