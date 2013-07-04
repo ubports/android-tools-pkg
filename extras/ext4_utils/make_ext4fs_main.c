@@ -32,7 +32,6 @@
 #ifndef USE_MINGW
 #include <selinux/selinux.h>
 #include <selinux/label.h>
-#include <selinux/android.h>
 #else
 struct selabel_handle;
 #endif
