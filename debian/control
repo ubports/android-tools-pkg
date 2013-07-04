@@ -55,7 +55,7 @@ Description: Android ext4 utilities with sparse support
 
 Package: android-tools-adbd
 Architecture: armhf i386 amd64
-Depends: ${misc:Depends}, ${python:Depends}, ${shlibs:Depends}
+Depends: libhybris-utils, ${misc:Depends}, ${python:Depends}, ${shlibs:Depends}
 Description: Android Debug Bridge Phone Daemon
  Android Debug Bridge (adb) is a versatile tool lets you manage the
  state of an emulator instance or Android-powered device. It is a
