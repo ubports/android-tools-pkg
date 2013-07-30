@@ -1,3 +1,10 @@
+android-tools (4.2.2+git20130218-3ubuntu14) saucy; urgency=low
+
+  * debian/android-tools-adb.udev: Adding rules for all usb configs that
+    enable adb.
+
+ -- Sergio Schvezov <sergio.schvezov@canonical.com>  Tue, 30 Jul 2013 15:08:43 -0300
+
 android-tools (4.2.2+git20130218-3ubuntu13) saucy; urgency=low
 
   * debian/control: android-tools-adbd should depend on libhybris-utils to use
