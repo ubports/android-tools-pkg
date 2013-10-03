@@ -1,3 +1,10 @@
+android-tools (4.2.2+git20130218-3ubuntu16) saucy; urgency=low
+
+  * android-tools-adbd.upstart: stop on runlevel [!2345] to avoid a respawn
+    loop when shutting down the device
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Thu, 03 Oct 2013 16:19:32 -0300
+
 android-tools (4.2.2+git20130218-3ubuntu15) saucy; urgency=low
 
   * Fix the udev rules, adding the missing comma and backslash that were
