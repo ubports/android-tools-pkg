@@ -1,3 +1,11 @@
+android-tools (4.2.2+git20130218-3ubuntu15) saucy; urgency=low
+
+  * Fix the udev rules, adding the missing comma and backslash that were
+    causing every single device under /dev to be writable to the active
+    user.
+
+ -- Stéphane Graber <stgraber@ubuntu.com>  Thu, 03 Oct 2013 14:06:33 -0400
+
 android-tools (4.2.2+git20130218-3ubuntu14) saucy; urgency=low
 
   * debian/android-tools-adb.udev: Adding rules for all usb configs that
