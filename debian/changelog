@@ -1,3 +1,11 @@
+android-tools (4.2.2+git20130218-3ubuntu17) trusty; urgency=low
+
+  * Patch adbd to provide commented out qemu_pipe launch path.
+  * Update android-tool-adbd.upstart job to launch adbd under qemu
+    emulator.
+
+ -- Dmitrijs Ledkovs <xnox@ubuntu.com>  Mon, 28 Oct 2013 13:17:07 +0000
+
 android-tools (4.2.2+git20130218-3ubuntu16) saucy; urgency=low
 
   * android-tools-adbd.upstart: stop on runlevel [!2345] to avoid a respawn
