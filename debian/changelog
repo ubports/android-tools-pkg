@@ -1,3 +1,9 @@
+android-tools (4.2.2+git20130218-3ubuntu18) trusty; urgency=low
+
+  * Fix adbd upstart pre-start logic.
+
+ -- Dmitrijs Ledkovs <xnox@ubuntu.com>  Tue, 29 Oct 2013 12:19:42 +0000
+
 android-tools (4.2.2+git20130218-3ubuntu17) trusty; urgency=low
 
   * Patch adbd to provide commented out qemu_pipe launch path.
