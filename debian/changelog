@@ -1,3 +1,9 @@
+android-tools (4.2.2+git20130218-3ubuntu19) trusty; urgency=medium
+
+  * debian/patches/ppc64el-ftbfs.patch: Fix build failure on ppc64el.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Fri, 21 Feb 2014 16:42:58 -0800
+
 android-tools (4.2.2+git20130218-3ubuntu18) trusty; urgency=low
 
   * Fix adbd upstart pre-start logic.
