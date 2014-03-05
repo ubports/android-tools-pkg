@@ -1,3 +1,10 @@
+android-tools (4.2.2+git20130218-3ubuntu20) trusty; urgency=medium
+
+  * do not reset android_usb device on startup to not cause unwanted
+    disconnects
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 05 Mar 2014 14:50:10 +0100
+
 android-tools (4.2.2+git20130218-3ubuntu19) trusty; urgency=medium
 
   * debian/patches/ppc64el-ftbfs.patch: Fix build failure on ppc64el.
