@@ -1,3 +1,11 @@
+android-tools (4.2.2+git20130218-3ubuntu21) trusty; urgency=low
+
+  * rework adbd upstart job to react to changes of the persist.sys.usb.config
+    property, on devices where functionfs is used (manta) we now mount the
+    functionfs layer to make the usb gadget usable by adb.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 06 Mar 2014 17:29:43 +0100
+
 android-tools (4.2.2+git20130218-3ubuntu20) trusty; urgency=medium
 
   * do not reset android_usb device on startup to not cause unwanted
