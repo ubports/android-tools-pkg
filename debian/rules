@@ -10,7 +10,7 @@ INSTALL := install
 INSTALL_PROGRAM = $(INSTALL)
 
 %:
-	dh $@ --with python2
+	dh $@ --with python2 --with bash-completion
 
 override_dh_clean:
 	dh_clean
