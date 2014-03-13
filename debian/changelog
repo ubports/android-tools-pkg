@@ -1,3 +1,9 @@
+android-tools (4.2.2+git20130218-3ubuntu22) trusty; urgency=medium
+
+  * Add bash completion for adb and fastboot
+
+ -- Chris Wayne <chris.wayne@canonical.com>  Thu, 13 Mar 2014 18:10:45 -0400
+
 android-tools (4.2.2+git20130218-3ubuntu21) trusty; urgency=low
 
   * rework adbd upstart job to react to changes of the persist.sys.usb.config
