@@ -25,4 +25,4 @@ pre-start script
 	fi
 end script
 
-exec /usr/bin/adbd
+exec su - -c adbd
