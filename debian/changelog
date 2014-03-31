@@ -1,3 +1,10 @@
+android-tools (4.2.2+git20130218-3ubuntu23) trusty; urgency=medium
+
+  * Start adbd under a PAM session, such that it has the default system
+    locale and environmental variables set. (LP: #1267117)
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Mon, 31 Mar 2014 18:57:22 +0100
+
 android-tools (4.2.2+git20130218-3ubuntu22) trusty; urgency=medium
 
   * Add bash completion for adb and fastboot
