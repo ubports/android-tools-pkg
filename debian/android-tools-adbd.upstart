@@ -18,7 +18,7 @@ pre-start script
 		# some devices use the functionfs (i.e. manta)
 		# we need to mount it to keep adb working
 		mkdir -p /dev/usb-ffs/adb
-		mount -t functionfs adb /dev/usb-ffs/adb
+		mount -t functionfs adb /dev/usb-ffs/adb || true
 	fi
 	else
 	grep -q qemu /proc/cmdline || { stop; exit 0; }
