@@ -47,3 +47,10 @@ ACTION=="add|change", SUBSYSTEM=="usb", \
   ATTRS{idVendor}=="04e8", \
   ATTRS{idProduct}=="685e|6860|6864|6866|6866", \
   TAG+="uaccess"
+
+# Applies to 2a47 (BQ)
+
+ACTION=="add|change", SUBSYSTEM=="usb", \
+  ATTRS{idVendor}=="2a47", \
+  ATTRS{idProduct}=="0c02|2008", \
+  TAG+="uaccess"
