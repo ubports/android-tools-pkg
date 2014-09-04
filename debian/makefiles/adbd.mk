@@ -44,7 +44,7 @@ CPPFLAGS+= -I.
 CPPFLAGS+= -I../include
 CPPFLAGS+= -I../../../external/zlib
 
-LIBS+= -lc -lpthread -lz -lcrypto
+LIBS+= -lc -lpthread -lz -lcrypto -lcrypt
 
 OBJS= $(patsubst %, %.o, $(basename $(SRCS)))
 
