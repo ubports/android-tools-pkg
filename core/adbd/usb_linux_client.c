@@ -20,7 +20,7 @@
 #include <string.h>
 
 #include <linux/usb/ch9.h>
-#include <linux/usb/functionfs.h>
+#include <functionfs.h>
 #include <sys/ioctl.h>
 #include <sys/types.h>
 #include <dirent.h>

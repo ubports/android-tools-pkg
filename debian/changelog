@@ -1,3 +1,24 @@
+android-tools (4.2.2+git20130218-3ubuntu29) utopic; urgency=medium
+
+  * fix homedir handling for dropped root
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 05 Sep 2014 00:16:25 +0200
+
+android-tools (4.2.2+git20130218-3ubuntu28) utopic; urgency=medium
+
+  * debian/patches/add_adbd.patch: drop privileges on shell connection to
+    hardcoded "phablet" user, disallow root in shells
+  * add udev rule to allow phablet group to connect to /dev/android_usb
+  * adjust upstart job for adbd to handle the phablet user
+  * make sure the upstart job only tries to mount a functionfs alias if there
+    was an alias defined in /sys/class/android_usb/android0/f_ffs/aliases
+  * ship our own functionfs header file as the one in linux-libc-dev comes
+    from mainline and is incompatible with the ancient android kernels we use
+  * add build dep for libcrypt-dev (since we check the password of the phablet
+    user on shell connections)
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 04 Sep 2014 21:52:13 +0200
+
 android-tools (4.2.2+git20130218-3ubuntu27) utopic; urgency=medium
 
   * debian/android-tools-adb.udev: Add udev rules for BQ.

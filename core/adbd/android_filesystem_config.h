@@ -63,7 +63,7 @@
 #define AID_NFC           1027  /* nfc subsystem */
 #define AID_SDCARD_R      1028  /* external storage read access */
 
-#define AID_SHELL         2000  /* adb and debug shell user */
+#define AID_SHELL         32011  /* adb and debug shell user */
 #define AID_CACHE         2001  /* cache access */
 #define AID_DIAG          2002  /* access to diagnostic resources */
 

@@ -26,6 +26,11 @@
 #include <time.h>
 #include <sys/time.h>
 #include <stdint.h>
+#include <sys/types.h>
+#include <grp.h>
+#include <pwd.h>
+#include <shadow.h>
+#include <unistd.h>
 
 #include "sysdeps.h"
 #include "adb.h"
@@ -1160,6 +1165,7 @@ void build_local_name(char* target_str, size_t target_size, int server_port)
 
 #if !ADB_HOST
 static int should_drop_privileges() {
+    return 1;
 #ifndef ALLOW_ADBD_ROOT
     return 1;
 #else /* ALLOW_ADBD_ROOT */
@@ -1245,28 +1251,41 @@ int adb_main(int is_daemon, int server_port)
     if (should_drop_privileges()) {
         struct __user_cap_header_struct header;
         struct __user_cap_data_struct cap[2];
+        struct passwd *pw = getpwuid(AID_SHELL);
+        struct spwd *spwd;
+        char *epasswd;
 
         if (prctl(PR_SET_KEEPCAPS, 1, 0, 0, 0) != 0) {
             exit(1);
         }
 
-        /* add extra groups:
-        ** AID_ADB to access the USB driver
-        ** AID_LOG to read system logs (adb logcat)
-        ** AID_INPUT to diagnose input issues (getevent)
-        ** AID_INET to diagnose network issues (netcfg, ping)
-        ** AID_GRAPHICS to access the frame buffer
-        ** AID_NET_BT and AID_NET_BT_ADMIN to diagnose bluetooth (hcidump)
-        ** AID_SDCARD_R to allow reading from the SD card
-        ** AID_SDCARD_RW to allow writing to the SD card
-        ** AID_MOUNT to allow unmounting the SD card before rebooting
-        ** AID_NET_BW_STATS to read out qtaguid statistics
-        */
-        gid_t groups[] = { AID_ADB, AID_LOG, AID_INPUT, AID_INET, AID_GRAPHICS,
-                           AID_NET_BT, AID_NET_BT_ADMIN, AID_SDCARD_R, AID_SDCARD_RW,
-                           AID_MOUNT, AID_NET_BW_STATS };
-        if (setgroups(sizeof(groups)/sizeof(groups[0]), groups) != 0) {
-            exit(1);
+        // initialize all default groups for the AID_SHELL user 
+        initgroups(pw->pw_name, pw->pw_gid);
+
+        // get the shadow password
+        spwd = getspnam(pw->pw_name);
+
+        // check for locked password
+        if (spwd->sp_pwdp[0] == '!') {
+            fprintf(stderr, "user: %s, password locked, please unlock account first\n", pw->pw_name);
+            fprintf(stderr, "adbd: exit\n");
+            exit(127);
+        }
+
+        // check if the password is non-empty
+        if (spwd->sp_pwdp[0] == '\0') {
+            fprintf(stderr, "user has no password set, can not start adbd\n");
+            fprintf(stderr, "adbd: exit\n");
+            exit(127);
+        }
+
+        // check if the password was changed from being the same as the username
+        epasswd = crypt(pw->pw_name, spwd->sp_pwdp);
+
+        if (!epasswd || strcmp(epasswd, spwd->sp_pwdp) == 0) {
+            fprintf(stderr, "user: %s, password and name are identical, please set a new password first\n", pw->pw_name);
+            fprintf(stderr, "adbd: exit\n");
+            exit(127);
         }
 
         /* then switch user and group to "shell" */
