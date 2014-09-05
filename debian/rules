@@ -35,6 +35,7 @@ override_dh_install:
 	$(INSTALL_PROGRAM) extras/ext4_utils/mkuserimg.sh debian/android-tools-fsutils/usr/bin/mkuserimg
 
 override_dh_installudev:
-	dh_installudev --name=android-tools-adbd --priority=98
-	dh_installudev --priority=70
+	dh_installudev -p android-tools-adb --priority=70
+	dh_installudev -p android-tools-fastboot --priority=70
+	dh_installudev -p android-tools-adbd --priority=98
 
