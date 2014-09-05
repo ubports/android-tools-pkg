@@ -1,3 +1,9 @@
+android-tools (4.2.2+git20130218-3ubuntu31) utopic; urgency=medium
+
+  * drop libxcrypt-dev build-dep, this is definitely not what we want
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 05 Sep 2014 21:13:29 +0200
+
 android-tools (4.2.2+git20130218-3ubuntu30) utopic; urgency=medium
 
   * flip dh_installudev commands around so our /dev/android_adb rule gets
