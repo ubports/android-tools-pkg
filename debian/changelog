@@ -1,3 +1,10 @@
+android-tools (4.2.2+git20130218-3ubuntu30) utopic; urgency=medium
+
+  * flip dh_installudev commands around so our /dev/android_adb rule gets
+    proper priority at 98
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 05 Sep 2014 17:42:47 +0200
+
 android-tools (4.2.2+git20130218-3ubuntu29) utopic; urgency=medium
 
   * fix homedir handling for dropped root
