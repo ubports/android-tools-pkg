@@ -1,3 +1,9 @@
+android-tools (4.2.2+git20130218-3ubuntu32) utopic; urgency=medium
+
+  * fix environment for "adb shell <command>"
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 08 Sep 2014 11:31:22 +0200
+
 android-tools (4.2.2+git20130218-3ubuntu31) utopic; urgency=medium
 
   * drop libxcrypt-dev build-dep, this is definitely not what we want
