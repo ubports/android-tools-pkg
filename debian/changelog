@@ -1,8 +1,14 @@
+android-tools (4.2.2+git20130218-3ubuntu33) utopic; urgency=medium
+
+  * drop env vars from adbd job, they are not needed here
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 10 Sep 2014 12:42:47 +0200
+
 android-tools (4.2.2+git20130218-3ubuntu32) utopic; urgency=medium
 
-  * fix environment for "adb shell <command>"
+  * fix environment for remote execution of adb shell commands
 
- -- Oliver Grawert <ogra@ubuntu.com>  Mon, 08 Sep 2014 11:31:22 +0200
+ -- Oliver Grawert <ogra@ubuntu.com>  Sun, 07 Sep 2014 21:43:30 +0200
 
 android-tools (4.2.2+git20130218-3ubuntu31) utopic; urgency=medium
 
