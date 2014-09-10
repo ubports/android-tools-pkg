@@ -7,11 +7,6 @@ description     "adbd"
 start on android-container persist.sys.usb.config=*adb
 stop on runlevel [06]
 
-env USER=phablet
-env HOME=/home/phablet
-export HOME
-export USER
-
 normal exit 0 127
 
 respawn
