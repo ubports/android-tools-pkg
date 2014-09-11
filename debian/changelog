@@ -1,3 +1,9 @@
+android-tools (4.2.2+git20130218-3ubuntu34) utopic; urgency=medium
+
+  * fix messed up adbd path
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 11 Sep 2014 11:44:49 +0200
+
 android-tools (4.2.2+git20130218-3ubuntu33) utopic; urgency=medium
 
   * drop env vars from adbd job, they are not needed here
