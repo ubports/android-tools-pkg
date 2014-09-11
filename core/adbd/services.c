@@ -258,11 +258,11 @@ static int create_service_thread(void (*func)(int, void *), void *cookie)
 }
 
 #if !ADB_HOST
-static int create_subprocess(const char *cmd, const char *arg0, const char *arg1, pid_t *pid)
+static int create_subprocess(const char *cmd, const char *arg0, const char *arg1, const char *arg2, const char *arg3,  const char *arg4, pid_t *pid)
 {
 #ifdef HAVE_WIN32_PROC
-    D("create_subprocess(cmd=%s, arg0=%s, arg1=%s)\n", cmd, arg0, arg1);
-    fprintf(stderr, "error: create_subprocess not implemented on Win32 (%s %s %s)\n", cmd, arg0, arg1);
+    D("create_subprocess(cmd=%s, arg0=%s, arg1=%s, arg2=%s, arg3=%, arg4=%ss)\n", cmd, arg0, arg1, arg2, arg3, arg4);
+    fprintf(stderr, "error: create_subprocess not implemented on Win32 (%s %s %s %s %s %s)\n", cmd, arg0, arg1, arg2, arg3, arg4);
     return -1;
 #else /* !HAVE_WIN32_PROC */
     char *devname;
@@ -317,7 +317,7 @@ static int create_subprocess(const char *cmd, const char *arg0, const char *arg1
         } else {
            D("adb: unable to open %s\n", text);
         }
-        execl(cmd, cmd, arg0, arg1, NULL);
+	execl(cmd, cmd, arg0, arg1, arg2, arg3, arg4, NULL);
         fprintf(stderr, "- exec '%s' failed: %s (%d) -\n",
                 cmd, strerror(errno), errno);
         exit(-1);
@@ -378,7 +378,21 @@ static int create_subproc_thread(const char *name)
     pid_t pid;
 
     struct passwd *user = getpwuid(getuid());
+    char *shell;
+    char *shellopts = "-c";
     char *home;
+    char *sudo = "/usr/bin/sudo";
+    char useropt[256] = "-u";
+
+    if (user->pw_name)
+        strcat(useropt, user->pw_name);
+
+    if (user && user->pw_shell) {
+        shell = user->pw_shell;
+        shellopts = "-cl";
+    } else {
+        shell = SHELL_COMMAND;
+    }
 
     if (user->pw_dir)
         home = user->pw_dir;
@@ -386,25 +400,9 @@ static int create_subproc_thread(const char *name)
             return 1;
 
     if(name) {
-        char *shell;
-        char *shellopts = "-c";
-
-        if (user && user->pw_shell) {
-            shell = user->pw_shell;
-            shellopts = "-cl";
-	} else {
-            shell = SHELL_COMMAND;
-	}
-
-        ret_fd = create_subprocess(shell, shellopts, name, &pid);
+	ret_fd = create_subprocess(sudo, useropt, "-i", shell, shellopts, name, &pid);
     } else {
-        char *sudo = "/usr/bin/sudo";
-        char useropt[256] = "-u";
-
-        if (user->pw_name)
-            strcat(useropt, user->pw_name);
-
-        ret_fd = create_subprocess(sudo, useropt, "-i", &pid);
+	ret_fd = create_subprocess(sudo, useropt, "-i", 0, 0, 0, &pid);
     }
     D("create_subprocess() ret_fd=%d pid=%d\n", ret_fd, pid);
 
