@@ -1,3 +1,10 @@
+android-tools (4.2.2+git20130218-3ubuntu35) utopic; urgency=medium
+
+  * wait for lightdm session to fix adbd in the emulator and also improve
+  the image smoke testing environment
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Sat, 13 Sep 2014 15:57:23 +0200
+
 android-tools (4.2.2+git20130218-3ubuntu34) utopic; urgency=medium
 
   * fix messed up adbd path

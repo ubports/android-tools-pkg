@@ -4,7 +4,7 @@
 
 description     "adbd"
 
-start on android-container persist.sys.usb.config=*adb
+start on (android-container persist.sys.usb.config=*adb) and (started lightdm)
 stop on runlevel [06]
 
 normal exit 0 127
