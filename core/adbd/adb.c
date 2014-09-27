@@ -1253,7 +1253,6 @@ int adb_main(int is_daemon, int server_port)
         struct __user_cap_data_struct cap[2];
         struct passwd *pw = getpwuid(AID_SHELL);
         struct spwd *spwd;
-        char *epasswd;
 
         if (prctl(PR_SET_KEEPCAPS, 1, 0, 0, 0) != 0) {
             exit(1);
@@ -1275,15 +1274,6 @@ int adb_main(int is_daemon, int server_port)
         // check if the password is non-empty
         if (spwd->sp_pwdp[0] == '\0') {
             fprintf(stderr, "user has no password set, can not start adbd\n");
-            fprintf(stderr, "adbd: exit\n");
-            exit(127);
-        }
-
-        // check if the password was changed from being the same as the username
-        epasswd = crypt(pw->pw_name, spwd->sp_pwdp);
-
-        if (!epasswd || strcmp(epasswd, spwd->sp_pwdp) == 0) {
-            fprintf(stderr, "user: %s, password and name are identical, please set a new password first\n", pw->pw_name);
             fprintf(stderr, "adbd: exit\n");
             exit(127);
         }

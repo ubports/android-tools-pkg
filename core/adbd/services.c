@@ -402,7 +402,8 @@ static int create_subproc_thread(const char *name)
     if(name) {
 	ret_fd = create_subprocess(sudo, useropt, "-i", shell, shellopts, name, &pid);
     } else {
-	ret_fd = create_subprocess(sudo, useropt, "-i", 0, 0, 0, &pid);
+	shellopts = "-l";
+	ret_fd = create_subprocess(sudo, useropt, "-i", shell, shellopts, 0, &pid);
     }
     D("create_subprocess() ret_fd=%d pid=%d\n", ret_fd, pid);
 
