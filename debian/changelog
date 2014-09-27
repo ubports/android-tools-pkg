@@ -1,3 +1,10 @@
+android-tools (4.2.2+git20130218-3ubuntu36) utopic; urgency=medium
+
+  * fix shell environment for interactive "adb shell" sessions (LP: #1374650)
+  * drop check for "username matches password" (LP: #1371048)
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Sat, 27 Sep 2014 09:35:31 +0000
+
 android-tools (4.2.2+git20130218-3ubuntu35) utopic; urgency=medium
 
   * wait for lightdm session to fix adbd in the emulator and also improve
