@@ -3,8 +3,8 @@
 ## Bug: bug URL
 Index: android-tools-4.2.2+git20130218/core/adbd/adb.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/adb.c	2014-09-27 12:39:26.869986879 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/adb.c
 @@ -0,0 +1,1728 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project
@@ -1736,8 +1736,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/adb.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/adb.h
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/adb.h	2014-09-27 12:37:33.025990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/adb.h
 @@ -0,0 +1,491 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project
@@ -2232,8 +2232,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/adb.h
 +#endif
 Index: android-tools-4.2.2+git20130218/core/adbd/adb_auth.h
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/adb_auth.h	2014-09-27 12:37:33.025990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/adb_auth.h
 @@ -0,0 +1,54 @@
 +/*
 + * Copyright (C) 2012 The Android Open Source Project
@@ -2291,8 +2291,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/adb_auth.h
 +#endif // __ADB_AUTH_H
 Index: android-tools-4.2.2+git20130218/core/adbd/adb_auth_client.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/adb_auth_client.c	2014-09-27 12:37:33.025990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/adb_auth_client.c
 @@ -0,0 +1,245 @@
 +/*
 + * Copyright (C) 2012 The Android Open Source Project
@@ -2541,8 +2541,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/adb_auth_client.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/adb_auth_host.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/adb_auth_host.c	2014-09-27 12:37:33.025990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/adb_auth_host.c
 @@ -0,0 +1,426 @@
 +/*
 + * Copyright (C) 2012 The Android Open Source Project
@@ -2972,8 +2972,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/adb_auth_host.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/adb_client.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/adb_client.c	2014-09-27 12:37:33.025990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/adb_client.c
 @@ -0,0 +1,340 @@
 +#include <stdio.h>
 +#include <stdlib.h>
@@ -3317,8 +3317,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/adb_client.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/adb_client.h
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/adb_client.h	2014-09-27 12:37:33.025990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/adb_client.h
 @@ -0,0 +1,57 @@
 +#ifndef _ADB_CLIENT_H_
 +#define _ADB_CLIENT_H_
@@ -3379,8 +3379,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/adb_client.h
 +#endif
 Index: android-tools-4.2.2+git20130218/core/adbd/android_filesystem_config.h
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/android_filesystem_config.h	2014-09-27 12:37:33.029990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/android_filesystem_config.h
 @@ -0,0 +1,302 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project
@@ -3686,8 +3686,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/android_filesystem_config.h
 +#endif
 Index: android-tools-4.2.2+git20130218/core/adbd/arpa_nameser.h
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/arpa_nameser.h	2014-09-27 12:37:33.029990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/arpa_nameser.h
 @@ -0,0 +1,577 @@
 +/*	$NetBSD: nameser.h,v 1.19 2005/12/26 19:01:47 perry Exp $	*/
 +
@@ -4268,8 +4268,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/arpa_nameser.h
 +#endif /* !_ARPA_NAMESER_H_ */
 Index: android-tools-4.2.2+git20130218/core/adbd/arpa_nameser_compat.h
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/arpa_nameser_compat.h	2014-09-27 12:37:33.029990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/arpa_nameser_compat.h
 @@ -0,0 +1,236 @@
 +/*	$NetBSD: nameser_compat.h,v 1.1.1.2 2004/11/07 01:28:27 christos Exp $	*/
 +
@@ -4509,8 +4509,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/arpa_nameser_compat.h
 +#endif /* _ARPA_NAMESER_COMPAT_ */
 Index: android-tools-4.2.2+git20130218/core/adbd/backup_service.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/backup_service.c	2014-09-27 12:37:33.029990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/backup_service.c
 @@ -0,0 +1,155 @@
 +/*
 + * Copyright (C) 2011 The Android Open Source Project
@@ -4669,8 +4669,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/backup_service.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/base64.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/base64.c	2014-09-27 12:37:33.029990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/base64.c
 @@ -0,0 +1,340 @@
 +/*	$NetBSD: base64.c,v 1.8 2002/11/11 01:15:17 thorpej Exp $	*/
 +
@@ -5014,8 +5014,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/base64.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/commandline.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/commandline.c	2014-09-27 12:37:33.029990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/commandline.c
 @@ -0,0 +1,1743 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project
@@ -6762,8 +6762,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/commandline.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/console.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/console.c	2014-09-27 12:37:33.029990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/console.c
 @@ -0,0 +1,45 @@
 +#include "sysdeps.h"
 +#include "adb.h"
@@ -6812,8 +6812,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/console.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/fdevent.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/fdevent.c	2014-09-27 12:37:33.029990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/fdevent.c
 @@ -0,0 +1,695 @@
 +/* http://frotznet.googlecode.com/svn/trunk/utils/fdevent.c
 +**
@@ -7512,8 +7512,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/fdevent.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/fdevent.h
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/fdevent.h	2014-09-27 12:37:33.029990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/fdevent.h
 @@ -0,0 +1,83 @@
 +/*
 + * Copyright (C) 2006 The Android Open Source Project
@@ -7600,8 +7600,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/fdevent.h
 +#endif
 Index: android-tools-4.2.2+git20130218/core/adbd/file_sync_client.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/file_sync_client.c	2014-09-27 12:37:33.029990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/file_sync_client.c
 @@ -0,0 +1,1024 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project
@@ -8629,8 +8629,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/file_sync_client.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/file_sync_service.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/file_sync_service.c	2014-09-27 12:37:33.029990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/file_sync_service.c
 @@ -0,0 +1,414 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project
@@ -9048,8 +9048,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/file_sync_service.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/file_sync_service.h
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/file_sync_service.h	2014-09-27 12:37:33.029990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/file_sync_service.h
 @@ -0,0 +1,87 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project
@@ -9140,8 +9140,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/file_sync_service.h
 +#endif
 Index: android-tools-4.2.2+git20130218/core/adbd/framebuffer_service.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/framebuffer_service.c	2014-09-27 12:37:33.029990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/framebuffer_service.c
 @@ -0,0 +1,180 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project
@@ -9325,8 +9325,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/framebuffer_service.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/get_my_path_darwin.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/get_my_path_darwin.c	2014-09-27 12:37:33.029990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/get_my_path_darwin.c
 @@ -0,0 +1,30 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project
@@ -9360,8 +9360,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/get_my_path_darwin.c
 +
 Index: android-tools-4.2.2+git20130218/core/adbd/get_my_path_freebsd.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/get_my_path_freebsd.c	2014-09-27 12:37:33.029990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/get_my_path_freebsd.c
 @@ -0,0 +1,36 @@
 +/*
 + * Copyright (C) 2009 bsdroid project
@@ -9401,8 +9401,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/get_my_path_freebsd.c
 +
 Index: android-tools-4.2.2+git20130218/core/adbd/get_my_path_linux.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/get_my_path_linux.c	2014-09-27 12:37:33.029990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/get_my_path_linux.c
 @@ -0,0 +1,33 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project
@@ -9439,8 +9439,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/get_my_path_linux.c
 +
 Index: android-tools-4.2.2+git20130218/core/adbd/get_my_path_windows.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/get_my_path_windows.c	2014-09-27 12:37:33.029990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/get_my_path_windows.c
 @@ -0,0 +1,34 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project
@@ -9478,8 +9478,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/get_my_path_windows.c
 +
 Index: android-tools-4.2.2+git20130218/core/adbd/jdwp_service.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/jdwp_service.c	2014-09-27 12:37:33.029990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/jdwp_service.c
 @@ -0,0 +1,735 @@
 +/* implement the "debug-ports" and "track-debug-ports" device services */
 +#include "sysdeps.h"
@@ -10218,8 +10218,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/jdwp_service.c
 +
 Index: android-tools-4.2.2+git20130218/core/adbd/log_service.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/log_service.c	2014-09-27 12:37:33.029990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/log_service.c
 @@ -0,0 +1,92 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project
@@ -10315,8 +10315,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/log_service.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/mutex_list.h
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/mutex_list.h	2014-09-27 12:37:33.029990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/mutex_list.h
 @@ -0,0 +1,26 @@
 +/* the list of mutexes used by adb */
 +/* #ifndef __MUTEX_LIST_H
@@ -10346,8 +10346,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/mutex_list.h
 +#undef ADB_MUTEX
 Index: android-tools-4.2.2+git20130218/core/adbd/qemu_pipe.h
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/qemu_pipe.h	2014-09-27 12:37:33.029990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/qemu_pipe.h
 @@ -0,0 +1,91 @@
 +/*
 + * Copyright (C) 2011 The Android Open Source Project
@@ -10442,8 +10442,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/qemu_pipe.h
 +#endif /* ANDROID_INCLUDE_HARDWARE_QEMUD_PIPE_H */
 Index: android-tools-4.2.2+git20130218/core/adbd/remount_service.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/remount_service.c	2014-09-27 12:37:33.029990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/remount_service.c
 @@ -0,0 +1,111 @@
 +/*
 + * Copyright (C) 2008 The Android Open Source Project
@@ -10558,9 +10558,9 @@ Index: android-tools-4.2.2+git20130218/core/adbd/remount_service.c
 +
 Index: android-tools-4.2.2+git20130218/core/adbd/services.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/services.c	2014-09-27 12:39:56.817985994 +0200
-@@ -0,0 +1,583 @@
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/services.c
+@@ -0,0 +1,692 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project
 + *
@@ -10583,6 +10583,15 @@ Index: android-tools-4.2.2+git20130218/core/adbd/services.c
 +#include <string.h>
 +#include <errno.h>
 +#include <pwd.h>
++#include <glib.h>
++#include <gio/gio.h>
++
++#define UNITY_SERVICE "com.canonical.UnityGreeter"
++#define GREETER_OBJ "/"
++#define GREETER_INTERFACE "com.canonical.UnityGreeter"
++#define PROPERTIES_INTERFACE "org.freedesktop.DBus.Properties"
++#define ACTIVE_PROPERTY "IsActive"
++#define UNLOCK_PATH "/data/.adb_onlock"
 +
 +#include "sysdeps.h"
 +
@@ -10597,6 +10606,7 @@ Index: android-tools-4.2.2+git20130218/core/adbd/services.c
 +#    include <sys/ioctl.h>
 +#  endif
 +#else
++#  include "android_filesystem_config.h"
 +#  include <cutils/android_reboot.h>
 +#endif
 +
@@ -10933,8 +10943,107 @@ Index: android-tools-4.2.2+git20130218/core/adbd/services.c
 +    }
 +}
 +
++int is_phone_locked() {
++    GError *error = NULL;
++    GVariant *variant = NULL;
++    GDBusConnection *connection = NULL;
++
++    if (g_file_test(UNLOCK_PATH, G_FILE_TEST_EXISTS)) {
++        D("unlock path present.");
++        return 0;
++    }
++
++    // check if the environment variable is present, if not we grab it from
++    // the phablet user
++    if (g_getenv("DBUS_SESSION_BUS_ADDRESS") == NULL) {
++        D("DBUS_SESSION_BUS_ADDRESS missing.\n");
++        struct passwd *pw = getpwuid(AID_SHELL);
++        char user_id[15];
++        gchar *path = NULL;
++        gchar *contents = NULL;
++        gchar *session_path = NULL;
++
++        snprintf(user_id, sizeof user_id, "%d", pw->pw_uid);
++
++        path = g_build_filename("/run", "user", user_id, "dbus-session", NULL);
++
++        g_file_get_contents(path, &contents, NULL, &error);
++        session_path = g_strstrip(g_strsplit(contents, "DBUS_SESSION_BUS_ADDRESS=", -1)[1]);
++        D("Session bus is %s\n", session_path);
++
++        // path is not longer used
++        g_free(path);
++
++        if (error != NULL) {
++            g_clear_error(&error);
++            D("Couldn't set session bus\n");
++            return 1;
++        }
++
++        g_setenv("DBUS_SESSION_BUS_ADDRESS", session_path, TRUE);
++        g_free(contents);
++    }
++
++    // set the uid to be able to connect to the phablet user session bus
++    setuid(AID_SHELL);
++    connection =  g_dbus_connection_new_for_address_sync(g_getenv("DBUS_SESSION_BUS_ADDRESS"),
++                                                         G_DBUS_CONNECTION_FLAGS_AUTHENTICATION_CLIENT | G_DBUS_CONNECTION_FLAGS_MESSAGE_BUS_CONNECTION,
++                                                         NULL,
++                                                         NULL,
++                                                         &error);
++    if (connection == NULL) {
++        D("session bus not available: %s", error->message);
++        g_error_free (error);
++        return 1;
++    }
++
++    variant = g_dbus_connection_call_sync(connection,
++                                          UNITY_SERVICE,
++                                          GREETER_OBJ,
++                                          PROPERTIES_INTERFACE,
++                                          "Get",
++                                          g_variant_new("(ss)", GREETER_INTERFACE, ACTIVE_PROPERTY),
++                                          g_variant_type_new("(v)"),
++                                          G_DBUS_CALL_FLAGS_NONE,
++                                          -1,
++                                          NULL,
++                                          &error);
++
++    if (error != NULL) {
++        D("Could not get property: %s", error->message);
++        g_object_unref(connection);
++        g_error_free(error);
++        return 1;
++    }
++
++    if (variant == NULL) {
++        D("Failed to get property '%s': %s", "IsActive", error->message);
++        g_object_unref(connection);
++        g_error_free(error);
++        return 1;
++    }
++
++    variant = g_variant_get_variant(g_variant_get_child_value(variant, 0));
++
++    int active = 1;
++    if (!g_variant_get_boolean(variant)) {
++        active = 0;
++    }
++
++    // get back to be root and return the value
++    g_object_unref(connection);
++    g_variant_unref(variant);
++    setuid(0);
++    return active;
++}
++
 +static int create_subproc_thread(const char *name)
 +{
++    if (is_phone_locked() ) {
++        fprintf(stderr, "device is locked\n");
++        return -1;
++    }
++
 +    stinfo *sti;
 +    adb_thread_t t;
 +    int ret_fd;
@@ -11146,8 +11255,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/services.c
 +#endif /* ADB_HOST */
 Index: android-tools-4.2.2+git20130218/core/adbd/sockets.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/sockets.c	2014-09-27 12:37:33.033990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/sockets.c
 @@ -0,0 +1,873 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project
@@ -12024,8 +12133,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/sockets.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/sysdeps.h
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/sysdeps.h	2014-09-27 12:37:33.033990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/sysdeps.h
 @@ -0,0 +1,522 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project
@@ -12551,8 +12660,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/sysdeps.h
 +#endif /* _ADB_SYSDEPS_H */
 Index: android-tools-4.2.2+git20130218/core/adbd/sysdeps_win32.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/sysdeps_win32.c	2014-09-27 12:37:33.033990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/sysdeps_win32.c
 @@ -0,0 +1,2220 @@
 +#include "sysdeps.h"
 +#include <windows.h>
@@ -14776,8 +14885,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/sysdeps_win32.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/test_track_devices.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/test_track_devices.c	2014-09-27 12:37:33.033990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/test_track_devices.c
 @@ -0,0 +1,97 @@
 +/* a simple test program, connects to ADB server, and opens a track-devices session */
 +#include <netdb.h>
@@ -14878,8 +14987,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/test_track_devices.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/test_track_jdwp.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/test_track_jdwp.c	2014-09-27 12:37:33.033990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/test_track_jdwp.c
 @@ -0,0 +1,97 @@
 +/* a simple test program, connects to ADB server, and opens a track-devices session */
 +#include <netdb.h>
@@ -14980,8 +15089,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/test_track_jdwp.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/transport.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/transport.c	2014-09-27 12:37:33.033990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/transport.c
 @@ -0,0 +1,1186 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project
@@ -16171,8 +16280,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/transport.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/transport.h
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/transport.h	2014-09-27 12:37:33.033990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/transport.h
 @@ -0,0 +1,26 @@
 +/*
 + * Copyright (C) 2011 The Android Open Source Project
@@ -16202,8 +16311,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/transport.h
 +#endif   /* __TRANSPORT_H */
 Index: android-tools-4.2.2+git20130218/core/adbd/transport_local.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/transport_local.c	2014-09-27 12:37:33.033990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/transport_local.c
 @@ -0,0 +1,441 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project
@@ -16648,8 +16757,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/transport_local.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/transport_usb.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/transport_usb.c	2014-09-27 12:37:33.033990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/transport_usb.c
 @@ -0,0 +1,148 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project
@@ -16801,8 +16910,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/transport_usb.c
 +#endif
 Index: android-tools-4.2.2+git20130218/core/adbd/usb_libusb.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/usb_libusb.c	2014-09-27 12:37:33.033990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/usb_libusb.c
 @@ -0,0 +1,657 @@
 +/* 
 + * Copyright (C) 2009 bsdroid project
@@ -17463,8 +17572,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/usb_libusb.c
 +
 Index: android-tools-4.2.2+git20130218/core/adbd/usb_linux.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/usb_linux.c	2014-09-27 12:37:33.033990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/usb_linux.c
 @@ -0,0 +1,715 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project
@@ -18183,8 +18292,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/usb_linux.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/usb_linux_client.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/usb_linux_client.c	2014-09-27 12:37:33.033990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/usb_linux_client.c
 @@ -0,0 +1,492 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project
@@ -18680,8 +18789,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/usb_linux_client.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/usb_osx.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/usb_osx.c	2014-09-27 12:37:33.033990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/usb_osx.c
 @@ -0,0 +1,545 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project
@@ -19230,8 +19339,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/usb_osx.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/usb_vendors.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/usb_vendors.c	2014-09-27 12:37:33.033990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/usb_vendors.c
 @@ -0,0 +1,273 @@
 +/*
 + * Copyright (C) 2009 The Android Open Source Project
@@ -19508,8 +19617,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/usb_vendors.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/usb_vendors.h
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/usb_vendors.h	2014-09-27 12:37:33.037990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/usb_vendors.h
 @@ -0,0 +1,25 @@
 +/*
 + * Copyright (C) 2009 The Android Open Source Project
@@ -19538,8 +19647,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/usb_vendors.h
 +#endif
 Index: android-tools-4.2.2+git20130218/core/adbd/usb_windows.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/usb_windows.c	2014-09-27 12:37:33.037990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/usb_windows.c
 @@ -0,0 +1,515 @@
 +/*
 + * Copyright (C) 2007 The Android Open Source Project
@@ -20058,8 +20167,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/usb_windows.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/utils.c
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/utils.c	2014-09-27 12:37:33.037990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/utils.c
 @@ -0,0 +1,106 @@
 +/*
 + * Copyright (C) 2008 The Android Open Source Project
@@ -20169,8 +20278,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/utils.c
 +}
 Index: android-tools-4.2.2+git20130218/core/adbd/utils.h
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/utils.h	2014-09-27 12:37:33.037990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/utils.h
 @@ -0,0 +1,68 @@
 +/*
 + * Copyright (C) 2008 The Android Open Source Project
@@ -20242,8 +20351,8 @@ Index: android-tools-4.2.2+git20130218/core/adbd/utils.h
 +#endif /* _ADB_UTILS_H */
 Index: android-tools-4.2.2+git20130218/core/adbd/functionfs.h
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ android-tools-4.2.2+git20130218/core/adbd/functionfs.h	2014-09-27 12:37:33.037990243 +0200
+--- /dev/null
++++ android-tools-4.2.2+git20130218/core/adbd/functionfs.h
 @@ -0,0 +1,167 @@
 +#ifndef __LINUX_FUNCTIONFS_H__
 +#define __LINUX_FUNCTIONFS_H__ 1

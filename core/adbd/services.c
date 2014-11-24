@@ -20,6 +20,15 @@
 #include <string.h>
 #include <errno.h>
 #include <pwd.h>
+#include <glib.h>
+#include <gio/gio.h>
+
+#define UNITY_SERVICE "com.canonical.UnityGreeter"
+#define GREETER_OBJ "/"
+#define GREETER_INTERFACE "com.canonical.UnityGreeter"
+#define PROPERTIES_INTERFACE "org.freedesktop.DBus.Properties"
+#define ACTIVE_PROPERTY "IsActive"
+#define UNLOCK_PATH "/data/.adb_onlock"
 
 #include "sysdeps.h"
 
@@ -34,6 +43,7 @@
 #    include <sys/ioctl.h>
 #  endif
 #else
+#  include "android_filesystem_config.h"
 #  include <cutils/android_reboot.h>
 #endif
 
@@ -370,8 +380,107 @@ static void subproc_waiter_service(int fd, void *cookie)
     }
 }
 
+int is_phone_locked() {
+    GError *error = NULL;
+    GVariant *variant = NULL;
+    GDBusConnection *connection = NULL;
+
+    if (g_file_test(UNLOCK_PATH, G_FILE_TEST_EXISTS)) {
+        D("unlock path present.");
+        return 0;
+    }
+
+    // check if the environment variable is present, if not we grab it from
+    // the phablet user
+    if (g_getenv("DBUS_SESSION_BUS_ADDRESS") == NULL) {
+        D("DBUS_SESSION_BUS_ADDRESS missing.\n");
+        struct passwd *pw = getpwuid(AID_SHELL);
+        char user_id[15];
+        gchar *path = NULL;
+        gchar *contents = NULL;
+        gchar *session_path = NULL;
+
+        snprintf(user_id, sizeof user_id, "%d", pw->pw_uid);
+
+        path = g_build_filename("/run", "user", user_id, "dbus-session", NULL);
+
+        g_file_get_contents(path, &contents, NULL, &error);
+        session_path = g_strstrip(g_strsplit(contents, "DBUS_SESSION_BUS_ADDRESS=", -1)[1]);
+        D("Session bus is %s\n", session_path);
+
+        // path is not longer used
+        g_free(path);
+
+        if (error != NULL) {
+            g_clear_error(&error);
+            D("Couldn't set session bus\n");
+            return 1;
+        }
+
+        g_setenv("DBUS_SESSION_BUS_ADDRESS", session_path, TRUE);
+        g_free(contents);
+    }
+
+    // set the uid to be able to connect to the phablet user session bus
+    setuid(AID_SHELL);
+    connection =  g_dbus_connection_new_for_address_sync(g_getenv("DBUS_SESSION_BUS_ADDRESS"),
+                                                         G_DBUS_CONNECTION_FLAGS_AUTHENTICATION_CLIENT | G_DBUS_CONNECTION_FLAGS_MESSAGE_BUS_CONNECTION,
+                                                         NULL,
+                                                         NULL,
+                                                         &error);
+    if (connection == NULL) {
+        D("session bus not available: %s", error->message);
+        g_error_free (error);
+        return 1;
+    }
+
+    variant = g_dbus_connection_call_sync(connection,
+                                          UNITY_SERVICE,
+                                          GREETER_OBJ,
+                                          PROPERTIES_INTERFACE,
+                                          "Get",
+                                          g_variant_new("(ss)", GREETER_INTERFACE, ACTIVE_PROPERTY),
+                                          g_variant_type_new("(v)"),
+                                          G_DBUS_CALL_FLAGS_NONE,
+                                          -1,
+                                          NULL,
+                                          &error);
+
+    if (error != NULL) {
+        D("Could not get property: %s", error->message);
+        g_object_unref(connection);
+        g_error_free(error);
+        return 1;
+    }
+
+    if (variant == NULL) {
+        D("Failed to get property '%s': %s", "IsActive", error->message);
+        g_object_unref(connection);
+        g_error_free(error);
+        return 1;
+    }
+
+    variant = g_variant_get_variant(g_variant_get_child_value(variant, 0));
+
+    int active = 1;
+    if (!g_variant_get_boolean(variant)) {
+        active = 0;
+    }
+
+    // get back to be root and return the value
+    g_object_unref(connection);
+    g_variant_unref(variant);
+    setuid(0);
+    return active;
+}
+
 static int create_subproc_thread(const char *name)
 {
+    if (is_phone_locked() ) {
+        fprintf(stderr, "device is locked\n");
+        return -1;
+    }
+
     stinfo *sti;
     adb_thread_t t;
     int ret_fd;
