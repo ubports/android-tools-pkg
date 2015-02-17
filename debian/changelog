@@ -1,3 +1,11 @@
+android-tools (4.2.2+git20130218-3ubuntu39) vivid; urgency=medium
+
+  * debian/patches/add-meizu-vendor-id.patch: Add USB vendor id for Meizu.
+  * debian/android-tools-adb.udev: Add udev rules for Meizu. Add a new USB
+    device ID for the BQ Aquaris which is exposed when only adb is active.
+
+ -- Jani Monoses <jani.monoses@canonical.com>  Tue, 17 Feb 2015 15:29:22 +0200
+
 android-tools (4.2.2+git20130218-3ubuntu38) vivid; urgency=medium
 
   * roll back the last change, the lab is not ready for it and rtm is missing
