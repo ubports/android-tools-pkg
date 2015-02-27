@@ -43,8 +43,9 @@ CPPFLAGS+= -DHAVE_TERMIO_H
 CPPFLAGS+= -I.
 CPPFLAGS+= -I../include
 CPPFLAGS+= -I../../../external/zlib
+CPPFLAGS+= `pkg-config --cflags glib-2.0 gio-2.0`
 
-LIBS+= -lc -lpthread -lz -lcrypto -lcrypt
+LIBS+= -lc -lpthread -lz -lcrypto -lcrypt `pkg-config --libs glib-2.0 gio-2.0`
 
 OBJS= $(patsubst %, %.o, $(basename $(SRCS)))
 
