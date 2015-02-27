@@ -1,3 +1,9 @@
+android-tools (4.2.2+git20130218-3ubuntu40) vivid; urgency=medium
+
+  * add check for screen locking to adbd (LP: #1382559)
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 27 Feb 2015 11:59:19 +0100
+
 android-tools (4.2.2+git20130218-3ubuntu39) vivid; urgency=medium
 
   * debian/patches/add-meizu-vendor-id.patch: Add USB vendor id for Meizu.
