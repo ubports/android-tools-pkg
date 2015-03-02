@@ -131,6 +131,8 @@
 #define VENDOR_ID_KOBO          0x2237
 // Teleepoch's USB Vendor ID
 #define VENDOR_ID_TELEEPOCH     0x2340
+// Meizu's USB Vendor ID
+#define VENDOR_ID_MEIZU         0x2a45
 // BQ's USB Vendor ID
 #define VENDOR_ID_BQ            0x2a47
 
@@ -185,6 +187,7 @@ int builtInVendorIds[] = {
     VENDOR_ID_YULONG_COOLPAD,
     VENDOR_ID_KOBO,
     VENDOR_ID_TELEEPOCH,
+    VENDOR_ID_MEIZU,
     VENDOR_ID_BQ,
 };
 
