@@ -1,3 +1,14 @@
+android-tools (4.2.2+git20130218-3ubuntu41) vivid; urgency=medium
+
+  core/adbd/services.c:
+  * disable all support for "adb root" (LP: #1367304)
+  * check screen lock state before allowing adb push/pull (LP: #1423293)
+  * move the screen lock check for adb shell to the arg processing code
+  * fix description of android-tools-adbd (LP: #1264427)
+  * use the right path for the lock check override file (LP: #1414288)
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 02 Mar 2015 13:30:02 +0100
+
 android-tools (4.2.2+git20130218-3ubuntu40) vivid; urgency=medium
 
   * add check for screen locking to adbd (LP: #1382559)
