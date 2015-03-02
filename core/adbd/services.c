@@ -585,21 +585,23 @@ int service_to_fd(const char *name)
     } else if (!strncmp(name, "log:", 4)) {
         ret = create_service_thread(log_service, get_log_file_path(name + 4));
     } else if(!HOST && !strncmp(name, "shell:", 6)) {
-        if(name[6]) {
-            ret = create_subproc_thread(name + 6);
-        } else {
-            ret = create_subproc_thread(0);
+        if (!is_phone_locked() ) {
+            if(name[6]) {
+                ret = create_subproc_thread(name + 6);
+            } else {
+                ret = create_subproc_thread(0);
+            }
         }
     } else if(!strncmp(name, "sync:", 5)) {
-        ret = create_service_thread(file_sync_service, NULL);
+        if (!is_phone_locked() ) {
+            ret = create_service_thread(file_sync_service, NULL);
+        }
     } else if(!strncmp(name, "remount:", 8)) {
         ret = create_service_thread(remount_service, NULL);
     } else if(!strncmp(name, "reboot:", 7)) {
         void* arg = strdup(name + 7);
         if(arg == 0) return -1;
         ret = create_service_thread(reboot_service, arg);
-    } else if(!strncmp(name, "root:", 5)) {
-        ret = create_service_thread(restart_root_service, NULL);
     } else if(!strncmp(name, "backup:", 7)) {
         char* arg = strdup(name+7);
         if (arg == NULL) return -1;
