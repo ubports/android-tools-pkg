@@ -1,3 +1,9 @@
+android-tools (4.2.2+git20130218-3ubuntu42) wily; urgency=medium
+
+  * Fix build failure on 64bit architectures.
+
+ -- Matthias Klose <doko@ubuntu.com>  Mon, 05 Oct 2015 11:55:57 +0200
+
 android-tools (4.2.2+git20130218-3ubuntu41) vivid; urgency=medium
 
   core/adbd/services.c:
