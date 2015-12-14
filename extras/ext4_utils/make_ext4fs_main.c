@@ -46,6 +46,7 @@ struct selabel_handle;
 
 extern struct fs_info info;
 
+extern struct selabel_handle* selinux_android_file_context_handle(void);
 
 static void usage(char *path)
 {
