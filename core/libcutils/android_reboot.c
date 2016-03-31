@@ -16,15 +16,16 @@
 
 #include <unistd.h>
 #include <sys/reboot.h>
+#include <sys/syscall.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <stdio.h>
 #include <string.h>
-#include <linux/reboot.h>
-#include <sys/syscall.h>
 
 #include <cutils/android_reboot.h>
+
+#define UNUSED __attribute__((unused))
 
 /* Check to see if /proc/mounts contains any writeable filesystems
  * backed by a block device.
@@ -56,7 +57,7 @@ static int remount_ro_done(void)
         mount_dir[255] = 0;
         mount_type[255] = 0;
         mount_opts[255] = 0;
-        if ((match == 6) && !strncmp(mount_dev, "/dev/block", 10) && strstr(mount_opts, "rw")) {
+        if ((match == 6) && !strncmp(mount_dev, "/dev/block", 10) && strstr(mount_opts, "rw,")) {
             found_rw_fs = 1;
             break;
         }
@@ -103,15 +104,12 @@ static void remount_ro(void)
 }
 
 
-int android_reboot(int cmd, int flags, char *arg)
+int android_reboot(int cmd, int flags UNUSED, char *arg)
 {
     int ret;
 
-    if (!(flags & ANDROID_RB_FLAG_NO_SYNC))
-        sync();
-
-    if (!(flags & ANDROID_RB_FLAG_NO_REMOUNT_RO))
-        remount_ro();
+    sync();
+    remount_ro();
 
     switch (cmd) {
         case ANDROID_RB_RESTART:
@@ -123,8 +121,8 @@ int android_reboot(int cmd, int flags, char *arg)
             break;
 
         case ANDROID_RB_RESTART2:
-            ret = syscall(SYS_reboot, LINUX_REBOOT_MAGIC1, LINUX_REBOOT_MAGIC2,
-                          LINUX_REBOOT_CMD_RESTART2, arg);
+            ret = syscall(__NR_reboot, LINUX_REBOOT_MAGIC1, LINUX_REBOOT_MAGIC2,
+                           LINUX_REBOOT_CMD_RESTART2, arg);
             break;
 
         default:
