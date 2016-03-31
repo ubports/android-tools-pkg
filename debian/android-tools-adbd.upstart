@@ -4,7 +4,7 @@
 
 description     "adbd"
 
-start on (android-container persist.sys.usb.config=*adb) and (started lightdm)
+start on ((android-container persist.sys.usb.config=*adb) and (started lightdm)) or (android-container ro.debuggable=1)
 stop on runlevel [06]
 
 normal exit 0 127
@@ -23,12 +23,17 @@ pre-start script
                         # some devices use the functionfs (i.e. manta)
                         # we need to mount it to keep adb working
                         mkdir -p /dev/usb-ffs/adb
-                        mount -t functionfs adb /dev/usb-ffs/adb || true
+                        chown phablet:phablet -R /dev/usb-ffs
+                        mount -o uid=32011,gid=32011 -t functionfs adb /dev/usb-ffs/adb || true
                 fi
         fi
         else
         grep -q qemu /proc/cmdline || { stop; exit 0; }
         fi
+end script
+
+post-stop script
+        unlink /dev/socket/adbd
 end script
 
 exec su - -c adbd

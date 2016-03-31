@@ -1,3 +1,60 @@
+android-tools (5.1.1r36+git20160322-0ubuntu3) xenial; urgency=medium
+
+  * debian/android-tools-adb.postinst:
+    - Don't modify current user's HOME adb config
+
+ -- Michael Terry <mterry@ubuntu.com>  Thu, 31 Mar 2016 14:48:46 -0400
+
+android-tools (5.1.1r36+git20160322-0ubuntu2) xenial; urgency=medium
+
+  [ Ondrej Kubik ]
+  * Fixing issue with sudo and permissions
+
+ -- Simon Fels <simon.fels@canonical.com>  Thu, 31 Mar 2016 10:45:42 +0200
+
+android-tools (5.1.1r36+git20160322-0ubuntu1) xenial; urgency=medium
+
+  [ Ondrej Kubik ]
+
+  * Upgarde to tools based on Android 5.1.1_r36
+  * Redoing all patches on top to make next upgrade cleaner
+  * fixing missing socket handling
+
+  [ Simon Fels ]
+
+  * debian/control
+    - Add myself as uploader
+  * debian/source/*:
+    - We're now using git-buildpackage to generate necessary patches on
+      top of upstream out of the git tree we're using to maintain the
+      package.
+
+ -- Simon Fels <simon.fels@canonical.com>  Fri, 11 Feb 2016 20:34:19 +0000
+
+android-tools (5.1.1r34+git20160211-0ubuntu3) xenial; urgency=medium
+
+  * debian/rules:
+    - don't build adbd on arm64 and ppc64el
+
+ -- Simon Fels <simon.fels@canonical.com>  Fri, 12 Feb 2016 10:56:56 +0100
+
+android-tools (5.1.1r34+git20160211-0ubuntu2) xenial; urgency=medium
+
+  * debian/control:
+    - limit libhybris-dev dependency for i386, amd64 and armhf
+    - add link to our vcs system we're now using
+
+ -- Simon Fels <simon.fels@canonical.com>  Fri, 12 Feb 2016 10:30:49 +0100
+
+android-tools (5.1.1r34+git20160211-0ubuntu1) xenial; urgency=medium
+
+  * Imported Upstream version 5.1.1r34+git20160211
+  * debian: update patches after new upstream release
+  * debian: add new patch to get 5.1.1 properly working
+  * debian: various fixes and tweaks
+
+ -- Simon Fels <simon.fels@canonical.com>  Fri, 12 Feb 2016 09:51:43 +0100
+
 android-tools (4.2.2+git20130218-3ubuntu43) xenial; urgency=high
 
   * Skip adbd build on s390x (similar to what was done for powerpc), ftbfs
