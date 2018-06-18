@@ -1,4 +1,4 @@
-android-tools (5.1.1r36+git20160322-0ubuntu3) xenial; urgency=medium
+android-tools (5.1.1r36+git20160323+ubports1) xenial; urgency=medium
 
   * debian/android-tools-adb.postinst:
     - Don't modify current user's HOME adb config
